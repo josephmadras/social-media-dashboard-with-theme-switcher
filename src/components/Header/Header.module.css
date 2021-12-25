@@ -14,3 +14,24 @@
   justify-content: space-between;
   padding: 15px 0;
 }
+
+@media screen and (min-width: 900px) {
+  header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .totalFollowers {
+    border-bottom: none;
+  }
+
+  .darkMode {
+    align-items: center;
+  }
+
+  .darkMode > h3 {
+    margin-right: 10px;
+  }
+}

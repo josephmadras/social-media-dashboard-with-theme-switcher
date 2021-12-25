@@ -4,11 +4,12 @@ import headerStyle from "./Header.module.css";
 const Header = () => {
   return (
     <header>
-      <h1 className={headerStyle.heading}> Social Media Dashboard</h1>
-      <strong className={headerStyle.totalFollowers}>
-        Total Followers: 23,004
-      </strong>
-
+      <div>
+        <h1 className={headerStyle.heading}> Social Media Dashboard</h1>
+        <strong className={headerStyle.totalFollowers}>
+          Total Followers: 23,004
+        </strong>
+      </div>
       <div className={headerStyle.darkMode}>
         <h3>Dark Mode</h3>
         <Switch />
