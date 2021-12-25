@@ -1,0 +1,34 @@
+.card {
+  background-color: hsl(227, 47%, 96%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  border-radius: 5px;
+  border-top: 3px solid hsl(208, 92%, 53%);
+}
+
+.username {
+  display: flex;
+  align-items: center;
+}
+.name {
+  margin-left: 5px;
+}
+.stat {
+  padding-top: 20px;
+  font-size: 50px;
+}
+
+.followers {
+  text-transform: uppercase;
+}
+
+.days {
+  color: hsl(163, 72%, 41%);
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  padding-top: 10px;
+}

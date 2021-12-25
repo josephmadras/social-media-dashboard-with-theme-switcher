@@ -1,5 +1,7 @@
 import "./App.css";
-import { Switch } from "@chakra-ui/switch";
+// import { Switch } from "@chakra-ui/switch";
+import { Card } from "./components";
+import { data } from "./data";
 
 function App() {
   return (
@@ -8,21 +10,27 @@ function App() {
         <h1 className="heading"> Social Media Dashboard</h1>
         <strong className="total-followers">Total Followers: 23,004</strong>
 
-        <div>
+        <div className="dark-mode">
           <h3>Dark Mode</h3>
-          <Switch size="md" />
+          {/* <Switch size="md" colorScheme="green" /> */}
         </div>
       </header>
 
       <main>
         <div className="global">
-          <div className="card card1"> @nathanf 1987 Followers 12 Today</div>
-          <div className="card card2"> @nathanf 1044 Followers 99 Today</div>
-          <div className="card card3">
-            {" "}
-            @realnathanf 11k Followers 1099 Today
-          </div>
-          <div className="card card4">Nathan F. 8239 Subscribers 144 Today</div>
+          {data.map(
+            ({ id, username, users: { number, type }, days, icon, arrow }) => (
+              <Card
+                key={id}
+                username={username}
+                users={number}
+                userType={type}
+                days={days}
+                icon={icon}
+                arrow={arrow}
+              />
+            )
+          )}
         </div>
 
         <div className="overview">
