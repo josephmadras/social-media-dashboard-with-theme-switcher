@@ -5,7 +5,7 @@ const DailyOverview = (props) => {
   return (
     <div className={styles.container}>
       <div>
-        <h1 className={styles.heading}>{title}</h1>
+        <h4 className={styles.heading}>{title}</h4>
         <strong className={styles.stats}>{stats}</strong>
       </div>
       <div>

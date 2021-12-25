@@ -1,5 +1,5 @@
 import { Card, DailyOverview, Header } from "./components";
-import { data } from "./data";
+import { data, daily } from "./data";
 import "./App.css";
 
 function App() {
@@ -36,15 +36,17 @@ function App() {
 
         <div className="overview">
           <h2>Overview - Today</h2>
-          <DailyOverview />
-          <div className="small-card small-card1"> Page Views 87 3%</div>
-          <div className="small-card small-card2"> Likes 52 2%</div>
-          <div className="small-card small-card3"> Likes 5462 2257%</div>
-          <div className="small-card small-card4"> Profile Views 52k 1375%</div>
-          <div className="small-card small-card5"> Retweets 117 303%</div>
-          <div className="small-card small-card6"> Likes 507 553%</div>
-          <div className="small-card small-card7"> Likes 107 19%</div>
-          <div className="small-card small-card8"> Total Views 1407 12%</div>
+          {daily.map(({ evolution, socialIcon, stats, title }, id) => {
+            return (
+              <DailyOverview
+                key={id}
+                title={title}
+                socialIcon={socialIcon}
+                stats={stats}
+                evolution={evolution}
+              />
+            );
+          })}
         </div>
       </main>
     </div>
