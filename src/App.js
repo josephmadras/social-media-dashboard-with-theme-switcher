@@ -1,7 +1,6 @@
-import "./App.css";
-// import { Switch } from "@chakra-ui/switch";
 import { Card } from "./components";
 import { data } from "./data";
+import "./App.css";
 
 function App() {
   return (
@@ -19,15 +18,26 @@ function App() {
       <main>
         <div className="global">
           {data.map(
-            ({ id, username, users: { number, type }, days, icon, arrow }) => (
+            ({
+              id,
+              username,
+              users: { number, type },
+              days,
+              icon,
+              socialBgColor,
+              arrow,
+              topBorder,
+            }) => (
               <Card
                 key={id}
                 username={username}
                 users={number}
                 userType={type}
                 days={days}
-                icon={icon}
+                socialMediaIcon={icon}
                 arrow={arrow}
+                socialBgColor={socialBgColor}
+                topBorder={topBorder}
               />
             )
           )}

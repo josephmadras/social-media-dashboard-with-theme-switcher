@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 80px;
   border-radius: 5px;
-  border-top: 3px solid hsl(208, 92%, 53%);
+  margin-bottom: 20px;
 }
 
 .username {
@@ -31,4 +31,13 @@
   align-items: center;
   font-weight: 700;
   padding-top: 10px;
+}
+
+.socialMediaIcon {
+  display: flex;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  justify-content: center;
+  align-items: center;
 }
