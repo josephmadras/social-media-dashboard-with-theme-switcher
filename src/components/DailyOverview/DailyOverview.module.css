@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(227, 47%, 96%);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.container > * > *:first-child {
+  margin-bottom: 30px;
+}
+.container > *:not(:first-child) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.container > *:not(:first-child) > *:first-child {
+  margin-bottom: 40px;
+}
+
+.stats {
+  font-size: 30px;
+}
+
+.evolution {
+  font-weight: 700;
+}
