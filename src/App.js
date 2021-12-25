@@ -1,4 +1,4 @@
-import { Card } from "./components";
+import { Card, Switch } from "./components";
 import { data } from "./data";
 import "./App.css";
 
@@ -11,7 +11,7 @@ function App() {
 
         <div className="dark-mode">
           <h3>Dark Mode</h3>
-          {/* <Switch size="md" colorScheme="green" /> */}
+          <Switch />
         </div>
       </header>
 

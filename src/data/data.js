@@ -35,12 +35,13 @@ export const data = [
     icon: (
       <FaInstagram
         style={{
-          color: "linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%))",
+          color: "linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1",
         }}
       />
     ),
     socialBgColor: "",
-    topBorder: "linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%))",
+    topBorder:
+      "linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1",
     arrow: <MdArrowDropUp />,
   },
   {

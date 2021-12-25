@@ -14,7 +14,12 @@ const Card = (props) => {
   return (
     <div
       className={cardStyle.card}
-      style={{ borderTop: `3px solid ${topBorder}` }}
+      style={{
+        borderTopStyle: "solid",
+        borderTopWidth: "3px",
+        borderTopColor: topBorder,
+        borderImage: topBorder,
+      }}
     >
       <div className={cardStyle.username}>
         <div
