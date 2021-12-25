@@ -1,20 +1,11 @@
-import { Card, Switch } from "./components";
+import { Card, DailyOverview, Header } from "./components";
 import { data } from "./data";
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <header>
-        <h1 className="heading"> Social Media Dashboard</h1>
-        <strong className="total-followers">Total Followers: 23,004</strong>
-
-        <div className="dark-mode">
-          <h3>Dark Mode</h3>
-          <Switch />
-        </div>
-      </header>
-
+      <Header />
       <main>
         <div className="global">
           {data.map(
@@ -45,6 +36,7 @@ function App() {
 
         <div className="overview">
           <h2>Overview - Today</h2>
+          <DailyOverview />
           <div className="small-card small-card1"> Page Views 87 3%</div>
           <div className="small-card small-card2"> Likes 52 2%</div>
           <div className="small-card small-card3"> Likes 5462 2257%</div>

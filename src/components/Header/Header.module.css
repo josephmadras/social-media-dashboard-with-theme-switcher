@@ -1,0 +1,16 @@
+.heading {
+  font-size: 28px;
+}
+
+.totalFollowers {
+  display: inline-block;
+  border-bottom: 1px solid black;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.darkMode {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}

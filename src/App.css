@@ -8,7 +8,7 @@
   background-color: hsl(0, 0%, 100%);
 }
 
-header .heading {
+/* header .heading {
   font-size: 28px;
 }
 
@@ -23,7 +23,7 @@ header .dark-mode {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
-}
+} */
 /* 
 main .card.card1 {
   background-color: hsl(227, 47%, 96%);
