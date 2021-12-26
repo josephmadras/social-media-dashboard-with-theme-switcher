@@ -36,24 +36,26 @@ function App() {
 
         <div className="overview">
           <h2>Overview - Today</h2>
-          {daily.map(
-            (
-              { title, stats, socialIcon, evolution, evolutionColor, arrow },
-              id
-            ) => {
-              return (
-                <DailyOverview
-                  key={id}
-                  title={title}
-                  socialIcon={socialIcon}
-                  stats={stats}
-                  evolution={evolution}
-                  evolutionColor={evolutionColor}
-                  arrow={arrow}
-                />
-              );
-            }
-          )}
+          <div className="content">
+            {daily.map(
+              (
+                { title, stats, socialIcon, evolution, evolutionColor, arrow },
+                id
+              ) => {
+                return (
+                  <DailyOverview
+                    key={id}
+                    title={title}
+                    socialIcon={socialIcon}
+                    stats={stats}
+                    evolution={evolution}
+                    evolutionColor={evolutionColor}
+                    arrow={arrow}
+                  />
+                );
+              }
+            )}
+          </div>
         </div>
       </main>
     </div>
