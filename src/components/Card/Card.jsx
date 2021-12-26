@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/theme";
 import cardStyle from "./Card.module.css";
 
 const Card = (props) => {
@@ -11,12 +13,16 @@ const Card = (props) => {
     days,
     topBorder,
   } = props;
+
+  const [{ theme, isDark }] = useContext(ThemeContext);
+
   return (
     <div
       className={cardStyle.card}
       style={{
         borderTopColor: topBorder,
         borderImage: topBorder,
+        backgroundColor: theme.cardBackground,
       }}
     >
       <div className={cardStyle.username}>
@@ -28,7 +34,12 @@ const Card = (props) => {
         </div>
         <strong className={cardStyle.name}>{username}</strong>
       </div>
-      <h4 className={cardStyle.stat}>{users}</h4>
+      <h4
+        className={cardStyle.stat}
+        style={{ color: isDark ? theme.textWhiteColor : theme.textBlueColor }}
+      >
+        {users}
+      </h4>
       <div className={cardStyle.followers}>{userType}</div>
       <div className={cardStyle.days}>
         {arrow} {days} Today

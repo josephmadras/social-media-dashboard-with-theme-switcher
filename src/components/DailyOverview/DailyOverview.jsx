@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { MdArrowDropUp } from "react-icons/md";
+import { ThemeContext } from "../../contexts/theme";
 import styles from "./DailyOverview.module.css";
 
 const DailyOverview = (props) => {
@@ -11,11 +13,21 @@ const DailyOverview = (props) => {
     evolutionColor,
     socialBgColor,
   } = props;
+  const [{ theme, isDark }] = useContext(ThemeContext);
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ backgroundColor: theme.cardBackground }}
+    >
       <div>
         <h4 className={styles.heading}>{title}</h4>
-        <strong className={styles.stats}>{stats}</strong>
+        <strong
+          className={styles.stats}
+          style={{ color: isDark ? theme.textWhiteColor : theme.textBlueColor }}
+        >
+          {stats}
+        </strong>
       </div>
       <div>
         <div

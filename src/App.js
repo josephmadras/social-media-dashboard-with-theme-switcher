@@ -1,10 +1,17 @@
 import { Card, DailyOverview, Header } from "./components";
 import { data, daily } from "./data";
+import { useContext } from "react";
+import { ThemeContext } from "./contexts/theme";
 import "./App.css";
 
 function App() {
+  const [{ theme, isDark }] = useContext(ThemeContext);
+
   return (
-    <div className="app">
+    <div
+      className="app"
+      style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
+    >
       <Header />
       <main>
         <div className="global">
@@ -35,7 +42,7 @@ function App() {
         </div>
 
         <div className="overview">
-          <h2>Overview - Today</h2>
+          <h2 style={{ color: theme.textGrayishColor }}>Overview - Today</h2>
           <div className="content">
             {daily.map(
               (
