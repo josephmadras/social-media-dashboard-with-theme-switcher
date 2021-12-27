@@ -35,9 +35,7 @@ const Card = (props) => {
 
         <strong
           className={cardStyle.name}
-          style={{
-            color: isDark ? theme.textGrayishColor : theme.textBlueColor,
-          }}
+          style={{ color: theme.textGrayishColor }}
         >
           {username}
         </strong>
@@ -50,7 +48,7 @@ const Card = (props) => {
       </h4>
       <div
         className={cardStyle.followers}
-        style={{ color: isDark ? theme.textGrayishColor : theme.textBlueColor }}
+        style={{ color: theme.textGrayishColor }}
       >
         {userType}
       </div>

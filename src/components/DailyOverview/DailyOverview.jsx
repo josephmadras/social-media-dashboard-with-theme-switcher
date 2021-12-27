@@ -25,7 +25,7 @@ const DailyOverview = (props) => {
         <h4
           className={styles.heading}
           style={{
-            color: isDark ? theme.textGrayishColor : theme.textBlueColor,
+            color: theme.textGrayishColor,
           }}
         >
           {title}

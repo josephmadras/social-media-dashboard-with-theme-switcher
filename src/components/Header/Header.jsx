@@ -18,20 +18,17 @@ const Header = () => {
         <strong
           className={headerStyle.totalFollowers}
           style={{
-            color: isDark ? theme.textGrayishColor : theme.textBlueColor,
+            color: theme.textGrayishColor,
+            borderBottom: `1px solid ${
+              isDark ? theme.textGrayishColor : theme.textBlueColor
+            }`,
           }}
         >
           Total Followers: 23,004
         </strong>
       </div>
       <div className={headerStyle.darkMode}>
-        <h3
-          style={{
-            color: isDark ? theme.textGrayishColor : theme.textBlueColor,
-          }}
-        >
-          Dark Mode
-        </h3>
+        <h3 style={{ color: theme.textGrayishColor }}>Dark Mode</h3>
         <Switch />
       </div>
     </header>

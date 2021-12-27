@@ -1,10 +1,10 @@
 .heading {
-  font-size: 28px;
+  font-size: 25px;
+  width: 100%;
 }
 
 .totalFollowers {
   display: inline-block;
-  border-bottom: 1px solid black;
   width: 100%;
   padding-bottom: 20px;
 }
@@ -22,10 +22,11 @@
     align-items: center;
     width: 100%;
     margin-bottom: 20px;
+    padding: 0 10.5%;
   }
 
   .totalFollowers {
-    border-bottom: none;
+    border-bottom: none !important;
   }
 
   .darkMode {
