@@ -1,7 +1,7 @@
-import { Card, DailyOverview, Header } from "./components";
-import { data as user, daily } from "./data";
+import { Card, DailyOverview, Header } from "..";
+import { data as user, daily } from "../../data";
 import { useContext } from "react";
-import { ThemeContext } from "./contexts/theme";
+import { ThemeContext } from "../../contexts/theme";
 import "./App.css";
 
 function App() {
