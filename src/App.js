@@ -1,11 +1,12 @@
 import { Card, DailyOverview, Header } from "./components";
-import { data, daily } from "./data";
+import { data as user, daily } from "./data";
 import { useContext } from "react";
 import { ThemeContext } from "./contexts/theme";
 import "./App.css";
 
 function App() {
   const [{ theme, isDark }] = useContext(ThemeContext);
+  const { white, grayish } = theme;
 
   return (
     <div
@@ -15,61 +16,38 @@ function App() {
       <Header />
       <main>
         <div className="global">
-          {data.map(
-            ({
-              id,
-              username,
-              users: { number, type },
-              days,
-              icon,
-              socialBgColor,
-              arrow,
-              topBorder,
-              daysColor,
-            }) => (
-              <Card
-                key={id}
-                username={username}
-                users={number}
-                userType={type}
-                days={days}
-                socialMediaIcon={icon}
-                arrow={arrow}
-                socialBgColor={socialBgColor}
-                topBorder={topBorder}
-                daysColor={daysColor}
-              />
-            )
-          )}
+          {user.map((data) => (
+            <Card
+              key={data.id}
+              username={data.username}
+              users={data.users.number}
+              userType={data.users.type}
+              days={data.days}
+              socialMediaIcon={data.icon}
+              arrow={data.arrow}
+              socialBgColor={data.socialBgColor}
+              topBorder={data.topBorder}
+              daysColor={data.daysColor}
+            />
+          ))}
         </div>
 
         <div className="overview">
-          <h2
-            style={{
-              color: isDark ? theme.textWhiteColor : theme.textGrayishColor,
-            }}
-          >
-            Overview - Today
-          </h2>
+          <h2 style={{ color: isDark ? white : grayish }}>Overview - Today</h2>
           <div className="content">
-            {daily.map(
-              (
-                { title, stats, socialIcon, evolution, evolutionColor, arrow },
-                id
-              ) => {
-                return (
-                  <DailyOverview
-                    key={id}
-                    title={title}
-                    socialIcon={socialIcon}
-                    stats={stats}
-                    evolution={evolution}
-                    evolutionColor={evolutionColor}
-                    arrow={arrow}
-                  />
-                );
-              }
-            )}
+            {daily.map((data, id) => {
+              return (
+                <DailyOverview
+                  key={id}
+                  title={data.title}
+                  socialIcon={data.socialIcon}
+                  stats={data.stats}
+                  evolution={data.evolution}
+                  evolutionColor={data.evolutionColor}
+                  arrow={data.arrow}
+                />
+              );
+            })}
           </div>
         </div>
       </main>

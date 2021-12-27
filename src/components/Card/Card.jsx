@@ -33,23 +33,17 @@ const Card = (props) => {
           {socialMediaIcon}
         </div>
 
-        <strong
-          className={cardStyle.name}
-          style={{ color: theme.textGrayishColor }}
-        >
+        <strong className={cardStyle.name} style={{ color: theme.grayish }}>
           {username}
         </strong>
       </div>
       <h4
         className={cardStyle.stat}
-        style={{ color: isDark ? theme.textWhiteColor : theme.textBlueColor }}
+        style={{ color: isDark ? theme.white : theme.blue }}
       >
         {users}
       </h4>
-      <div
-        className={cardStyle.followers}
-        style={{ color: theme.textGrayishColor }}
-      >
+      <div className={cardStyle.followers} style={{ color: theme.grayish }}>
         {userType}
       </div>
 

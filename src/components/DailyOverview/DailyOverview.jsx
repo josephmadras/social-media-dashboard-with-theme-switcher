@@ -22,17 +22,12 @@ const DailyOverview = (props) => {
       style={{ backgroundColor: theme.cardBackground }}
     >
       <div>
-        <h4
-          className={styles.heading}
-          style={{
-            color: theme.textGrayishColor,
-          }}
-        >
+        <h4 className={styles.heading} style={{ color: theme.grayish }}>
           {title}
         </h4>
         <strong
           className={styles.stats}
-          style={{ color: isDark ? theme.textWhiteColor : theme.textBlueColor }}
+          style={{ color: isDark ? theme.white : theme.blue }}
         >
           {stats}
         </strong>

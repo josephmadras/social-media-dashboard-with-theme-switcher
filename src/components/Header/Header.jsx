@@ -10,7 +10,7 @@ const Header = () => {
       <div>
         <h1
           className={headerStyle.heading}
-          style={{ color: isDark ? theme.textWhiteColor : theme.textBlueColor }}
+          style={{ color: isDark ? theme.white : theme.blue }}
         >
           Social Media Dashboard
         </h1>
@@ -18,17 +18,15 @@ const Header = () => {
         <strong
           className={headerStyle.totalFollowers}
           style={{
-            color: theme.textGrayishColor,
-            borderBottom: `1px solid ${
-              isDark ? theme.textGrayishColor : theme.textBlueColor
-            }`,
+            color: theme.grayish,
+            borderBottom: `1px solid ${isDark ? theme.grayish : theme.blue}`,
           }}
         >
           Total Followers: 23,004
         </strong>
       </div>
       <div className={headerStyle.darkMode}>
-        <h3 style={{ color: theme.textGrayishColor }}>Dark Mode</h3>
+        <h3 style={{ color: theme.grayish }}>Dark Mode</h3>
         <Switch />
       </div>
     </header>

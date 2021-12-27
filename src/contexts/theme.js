@@ -6,18 +6,18 @@ const themes = {
   dark: {
     backgroundColor: "hsl(230, 17%, 14%)",
     cardBackground: "hsl(228, 28%, 20%)",
-    textBlueColor: "hsl(228, 34%, 66%)",
-    textWhiteColor: "hsl(0, 0%, 100%)",
+    blue: "hsl(228, 34%, 66%)",
+    white: "hsl(0, 0%, 100%)",
+    grayish: "hsl(228, 12%, 44%)",
     topColor: "hsl(232, 19%, 15%)",
-    textGrayishColor: "hsl(228, 12%, 44%)",
   },
   light: {
     backgroundColor: "hsl(0, 0%, 100%)",
     cardBackground: "hsl(227, 47%, 96%)",
-    textBlueColor: "hsl(230, 17%, 14%)",
-    textWhiteColor: "hsl(0, 0%, 100%)",
+    blue: "hsl(230, 17%, 14%)",
+    white: "hsl(0, 0%, 100%)",
+    grayish: "hsl(228, 12%, 44%)",
     topColor: "hsl(225, 100%, 98%)",
-    textGrayishColor: "hsl(228, 12%, 44%)",
   },
 };
 
