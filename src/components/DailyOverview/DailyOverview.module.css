@@ -5,8 +5,13 @@
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
+  transition: box-shadow 250ms ease-in-out;
 }
 
+.container:hover {
+  box-shadow: rgba(77, 77, 223, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
 .container > * > *:first-child {
   margin-bottom: 30px;
 }
@@ -26,4 +31,8 @@
 
 .evolution {
   font-weight: 700;
+}
+
+.heading {
+  font-size: 14px;
 }

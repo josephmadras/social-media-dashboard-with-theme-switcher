@@ -13,6 +13,7 @@ const DailyOverview = (props) => {
     evolutionColor,
     socialBgColor,
   } = props;
+
   const [{ theme, isDark }] = useContext(ThemeContext);
 
   return (
@@ -21,7 +22,14 @@ const DailyOverview = (props) => {
       style={{ backgroundColor: theme.cardBackground }}
     >
       <div>
-        <h4 className={styles.heading}>{title}</h4>
+        <h4
+          className={styles.heading}
+          style={{
+            color: isDark ? theme.textGrayishColor : theme.textBlueColor,
+          }}
+        >
+          {title}
+        </h4>
         <strong
           className={styles.stats}
           style={{ color: isDark ? theme.textWhiteColor : theme.textBlueColor }}

@@ -25,6 +25,7 @@ function App() {
               socialBgColor,
               arrow,
               topBorder,
+              daysColor,
             }) => (
               <Card
                 key={id}
@@ -36,13 +37,20 @@ function App() {
                 arrow={arrow}
                 socialBgColor={socialBgColor}
                 topBorder={topBorder}
+                daysColor={daysColor}
               />
             )
           )}
         </div>
 
         <div className="overview">
-          <h2 style={{ color: theme.textGrayishColor }}>Overview - Today</h2>
+          <h2
+            style={{
+              color: isDark ? theme.textWhiteColor : theme.textGrayishColor,
+            }}
+          >
+            Overview - Today
+          </h2>
           <div className="content">
             {daily.map(
               (

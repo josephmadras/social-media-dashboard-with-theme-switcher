@@ -3,6 +3,7 @@ import { ThemeContext } from "../../contexts/theme";
 import cardStyle from "./Card.module.css";
 
 const Card = (props) => {
+  const [{ theme, isDark }] = useContext(ThemeContext);
   const {
     socialMediaIcon,
     socialBgColor,
@@ -10,11 +11,10 @@ const Card = (props) => {
     username,
     users,
     userType,
-    days,
     topBorder,
+    days,
+    daysColor,
   } = props;
-
-  const [{ theme, isDark }] = useContext(ThemeContext);
 
   return (
     <div
@@ -32,7 +32,15 @@ const Card = (props) => {
         >
           {socialMediaIcon}
         </div>
-        <strong className={cardStyle.name}>{username}</strong>
+
+        <strong
+          className={cardStyle.name}
+          style={{
+            color: isDark ? theme.textGrayishColor : theme.textBlueColor,
+          }}
+        >
+          {username}
+        </strong>
       </div>
       <h4
         className={cardStyle.stat}
@@ -40,12 +48,21 @@ const Card = (props) => {
       >
         {users}
       </h4>
-      <div className={cardStyle.followers}>{userType}</div>
-      <div className={cardStyle.days}>
+      <div
+        className={cardStyle.followers}
+        style={{ color: isDark ? theme.textGrayishColor : theme.textBlueColor }}
+      >
+        {userType}
+      </div>
+
+      <div className={cardStyle.days} style={{ color: daysColor }}>
         {arrow} {days} Today
       </div>
     </div>
   );
 };
 
+Card.defaultProps = {
+  daysColor: "hsl(163, 72%, 41%)",
+};
 export default Card;

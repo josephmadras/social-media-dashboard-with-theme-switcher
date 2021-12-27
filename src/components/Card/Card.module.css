@@ -6,11 +6,15 @@
   padding: 1.25rem 5rem;
   margin-bottom: 20px;
   border-radius: 5px;
-  /* background-color: hsl(227, 47%, 96%); */
   border-top-style: solid;
   border-top-width: 3px;
+  transition: box-shadow 250ms ease-in-out;
 }
-
+.card:hover {
+  /* box-shadow: rgba(77, 77, 223, 0.2) 0px 7px 29px 0px; */
+  box-shadow: rgba(77, 77, 223, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
 .username {
   display: flex;
   align-items: center;
@@ -32,7 +36,6 @@
   align-items: center;
   font-weight: 700;
   padding-top: 10px;
-  color: hsl(163, 72%, 41%);
 }
 
 .socialMediaIcon {

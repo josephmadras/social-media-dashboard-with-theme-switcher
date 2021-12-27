@@ -60,5 +60,6 @@ export const data = [
     socialBgColor: "hsl(348, 97%, 39%)",
     topBorder: "hsl(348, 97%, 39%)",
     arrow: <MdArrowDropDown />,
+    daysColor: "hsl(348, 97%, 39%)",
   },
 ];
